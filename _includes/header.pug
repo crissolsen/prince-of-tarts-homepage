@@ -5,31 +5,27 @@ html(lang="en")
   meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
   meta(name="description" content="Prince of Tarts is the best bakery in the Garden Route. You are able to custom order or come into our shop on Hibernia street. Enjoy sweet treats as well as savoury. Only the best!")
   meta(name="keywords" content="prince of tarts, bakery garden route, bakery, garden route coffee, george coffee, george bakery, cakes, cake george, cakes george, cakes garden route")
-  //- Bootstrap CSS
-  link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous")
+    //- Bootstrap 5 Alpha
+  link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous")  
   title #{ title }
 
   style.
     body {
-        background: gray;
+        background-color:#414142;
+        background-image:
+        radial-gradient(#d9d1bd 9px, transparent 10px),
+        repeating-radial-gradient(#d9d1bd 0, #d9d1bd 4px, transparent 5px, transparent 20px, #d9d1bd 21px, #d9d1bd 25px, transparent 26px, transparent 50px);
+        background-size: 30px 30px, 90px 90px;
+        background-position: 0 0;
     }  
+
    .top-logo {
        position: fixed;
+       z-index: 10;
    }
 
-   .main-logo {
-       height: 14vh;
-   }
-
-   @media (max-width: 573px) {
-       .main-logo {
-           height: 10vh;
-       }
-   }
-   
-   
   body
    .container-fluid.top-logo
     nav(class= "navbar col-12 col-md-5 p-sm-0")
-     a(href="#" class= "d-block mx-auto mt-md-3")
-      img(class="main-logo" src="https://res.cloudinary.com/dvwsiufhl/image/upload/q_auto,f_auto/v1602247579/PrinceofTarts/logo-black_g0gkfc.png")
+      a(href="#" class= "d-block mx-auto mt-md-3")
+       img(class="navbar-brand" src="https://res.cloudinary.com/dvwsiufhl/image/upload/q_auto,f_auto,dpr_auto,w_0.25/v1602247579/PrinceofTarts/logo-black_g0gkfc.png" )

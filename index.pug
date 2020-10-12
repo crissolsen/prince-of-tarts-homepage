@@ -3,7 +3,17 @@ block vars
 
 include _includes/header
 
-div(id="my-gallery" class="go-back")
+include _includes/carousel
+h1(style="display: none") Welcome to Prince of Tarts
+
+.container
+    .d-flex.justify-content-center(style="margin-top: -4em")
+     button(class="btn  m-1 mr-md-5" style="background: #FF6B03") Menu
+     button(class="btn  m-1 mr-lg-5 ml-lg-5" style="background: #FF6B03") Cake Menu
+     button(class="btn  m-1 ml-md-5" style="background: #FF6B03") Contact Us
+
+.container.d-flex.justify-content-center
+ iframe(class="mx-auto mt-5" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1391.298790015374!2d22.4660904930679!3d-33.96465879504129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dd6054abcd373bf%3A0xf5010784dd36c03c!2sPrince%20of%20Tarts!5e0!3m2!1sen!2sza!4v1602495451565!5m2!1sen!2sza" width="800" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0")
 
 include _includes/footer
 
