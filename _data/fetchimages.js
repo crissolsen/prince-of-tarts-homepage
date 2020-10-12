@@ -21,7 +21,7 @@ module.exports = async function () {
   //Takes current URL and adds in any transformation for all of them from Cloudinary. In this case, q_auto and f_auto
 function transformedURL(url) {
   let baseURL = "https://res.cloudinary.com/dvwsiufhl/image/upload/"
-  let optimisations = "q_auto,dpr_auto,f_auto/"
+  let optimisations = "w_auto,c_scale,q_auto,dpr_auto,f_auto/"
   let optimisedURLEnd = baseURL.concat(optimisations)
   let endOfURL = url.slice(baseURL.length);
   let returnedURL = optimisedURLEnd.concat(endOfURL)
