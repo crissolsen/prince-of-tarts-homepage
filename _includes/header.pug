@@ -7,6 +7,7 @@ html(lang="en")
   meta(name="keywords" content="prince of tarts, bakery garden route, bakery, garden route coffee, george coffee, george bakery, cakes, cake george, cakes george, cakes garden route")
     //- Bootstrap 5 Alpha
   link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous")  
+  link(rel="icon" type="image" href="https://res.cloudinary.com/dvwsiufhl/image/upload/q_auto,f_auto,dpr_auto,w_0.25/v1602247579/PrinceofTarts/logo-black_g0gkfc.png")
   title #{ title }
 
   style.
@@ -19,13 +20,14 @@ html(lang="en")
         background-position: 0 0;
     }  
 
-   .top-logo {
-       position: fixed;
-       z-index: 10;
-   }
+
 
   body
-   .container-fluid.top-logo
-    nav(class= "navbar col-12 col-md-5 p-sm-0")
-      a(href="#" class= "d-block mx-auto mt-md-3")
-       img(class="navbar-brand" src="https://res.cloudinary.com/dvwsiufhl/image/upload/q_auto,f_auto,dpr_auto,w_0.25/v1602247579/PrinceofTarts/logo-black_g0gkfc.png" )
+   nav(class= "navbar fixed-top")
+    .container-fluid.justify-content-center
+      a(href="#" class= "navbar-brand")
+       img(src="https://res.cloudinary.com/dvwsiufhl/image/upload/q_auto,f_auto,dpr_auto,w_0.25/v1602247579/PrinceofTarts/logo-black_g0gkfc.png" )
+      ul(class="navbar-nav mr-4")
+       li(class="nav-item btn font-weight-bold mt-1 shadow-lg" style="background: #FF6B03") Menu
+       li(class="nav-item btn font-weight-bold mt-1 shadow-lg" style="background: #FF6B03") Cake Menu
+       li(class="nav-item btn font-weight-bold mt-1 shadow-lg" style="background: #FF6B03") Contact Us
