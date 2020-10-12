@@ -21,18 +21,41 @@ html(lang="en")
     }
 
    li {
-    box-shadow: 5px 5px 5px black;
+    box-shadow: 5px 10px inset black;
+    border-radius: 10% !important;
+    }
+
+    @media screen and (max-width: 991px) {
+      #logo {
+        height: 100px;
+        width: 100px;
+      }
+      a {
+        padding: 0.5em;
+        font-weight: inherit;
+      }
     }  
  
+    .btn-c {
+      color: black;
+      border-radius: 10% !important;
+    }
+
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+        z-index: 10;
+    }
+
   body
    nav(class= "navbar fixed-top")
     .container-fluid.justify-content-center
       a(href="#" class= "navbar-brand")
-       img(src="https://res.cloudinary.com/dvwsiufhl/image/upload/q_100,w_0.25,e_shadow:30,co_black/v1602247579/PrinceofTarts/logo-black_g0gkfc.png")
-      ul(class="navbar-nav mr-4")
-       li
-        a(class="nav-link btn font-weight-bold mt-1 p-1" style="background: #FF6B03" href="https://res.cloudinary.com/dvwsiufhl/image/upload/q_100,f_auto/v1602506444/PrinceofTarts/Prince_of_Tarts_Menu_ltunc2.jpg" target="_blank") Menu
-       li
-        a(class="nav-link btn font-weight-bold mt-1 shadow-lg" style="background: #FF6B03") Cake Menu
-       li
-        a(class="nav-link btn font-weight-bold mt-1 " style="background: #FF6B03" data-toggle="modal" data-target="#modal") Contact Us
+       img(id="logo" src="https://res.cloudinary.com/dvwsiufhl/image/upload/q_auto:best,c_thumb,w_113,e_shadow:30,co_black/v1602247579/PrinceofTarts/logo-black_g0gkfc.png")
+      button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarItems" aria-controls="navbarItems" aria-expanded="false" aria-label="Toggle navigation" style="border:none")
+       img(id="toggler" src="https://res.cloudinary.com/dvwsiufhl/image/upload/q_auto:best,c_thumb,w_10,e_shadow:30,co_black/v1602247579/PrinceofTarts/logo-black_g0gkfc.png")
+        
+      .collapse.navbar-collapse(id="navbarItems")
+       .navbar-nav
+        a(class="nav-link active btn btn-c font-weight-bold mt-1 p-1 rounded" style="background: #FF6B03" href="https://res.cloudinary.com/dvwsiufhl/image/upload/q_100,f_auto/v1602506444/PrinceofTarts/Prince_of_Tarts_Menu_ltunc2.jpg" target="_blank" role="button" aria-current="page") Menu
+        a(class="nav-link btn btn-c font-weight-bold mt-1 rounded pl-1 pr-1" style="background: #FF6B03") Cake Menu
+        a(class="nav-link btn btn-c font-weight-bold mt-1 rounded" style="background: #FF6B03" data-toggle="modal" data-target="#modal") Contact Us
