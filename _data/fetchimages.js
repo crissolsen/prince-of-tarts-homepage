@@ -1,5 +1,4 @@
 const axios = require("axios")
-const cloudinary = require("cloudinary").v2
 require("dotenv").config()
 
 module.exports = async function () {
