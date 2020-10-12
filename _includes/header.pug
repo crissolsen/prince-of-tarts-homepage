@@ -1,0 +1,35 @@
+doctype html
+html(lang="en")
+ head
+  meta(charset="utf-8")
+  meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+  meta(name="description" content="Prince of Tarts is the best bakery in the Garden Route. You are able to custom order or come into our shop on Hibernia street. Enjoy sweet treats as well as savoury. Only the best!")
+  meta(name="keywords" content="prince of tarts, bakery garden route, bakery, garden route coffee, george coffee, george bakery, cakes, cake george, cakes george, cakes garden route")
+  //- Bootstrap CSS
+  link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous")
+  title #{ title }
+
+  style.
+    body {
+        background: gray;
+    }  
+   .top-logo {
+       position: fixed;
+   }
+
+   .main-logo {
+       height: 14vh;
+   }
+
+   @media (max-width: 573px) {
+       .main-logo {
+           height: 10vh;
+       }
+   }
+   
+   
+  body
+   .container-fluid.top-logo
+    nav(class= "navbar col-12 col-md-5 p-sm-0")
+     a(href="#" class= "d-block mx-auto mt-md-3")
+      img(class="main-logo" src="https://res.cloudinary.com/dvwsiufhl/image/upload/q_auto,f_auto/v1602247579/PrinceofTarts/logo-black_g0gkfc.png")
