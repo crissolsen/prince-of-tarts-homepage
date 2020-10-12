@@ -1,5 +1,6 @@
 const axios = require("axios")
-require("dotenv").config();
+const cloudinary = require("cloudinary").v2
+require("dotenv").config()
 
 module.exports = async function () {
   try {
@@ -10,7 +11,7 @@ module.exports = async function () {
       let allData = response.data.resources
       let allURLS = []
       for(let i=0;i<allData.length;i++) {
-        allURLS.push(transformedURL(allData[i].url))
+        allURLS.push(transformedURL(allData[i].secure_url))
       }
      return allURLS
   } catch (error) {
@@ -20,8 +21,8 @@ module.exports = async function () {
 
   //Takes current URL and adds in any transformation for all of them from Cloudinary. In this case, q_auto and f_auto
 function transformedURL(url) {
-  let baseURL = "http://res.cloudinary.com/dvwsiufhl/image/upload/"
-  let optimisations = "q_auto,f_auto,dpr_auto/"
+  let baseURL = "https://res.cloudinary.com/dvwsiufhl/image/upload/"
+  let optimisations = "q_auto,dpr_auto,f_auto/"
   let optimisedURLEnd = baseURL.concat(optimisations)
   let endOfURL = url.slice(baseURL.length);
   let returnedURL = optimisedURLEnd.concat(endOfURL)
