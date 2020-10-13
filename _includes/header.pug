@@ -31,20 +31,15 @@ html(lang="en")
         font-weight: inherit;
       }
     }  
- 
-    .btn-c {
-      color: black;
-      border-radius: 10% !important;
-    }
 
     .navbar-toggler-icon {
-        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-        z-index: 10;
+       background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+       z-index: 10;
+       box-shadow: 5px 2px 10px;
     }
 
     .navbar-toggler:focus {
       box-shadow: none !important;
-
     }
 
   body
@@ -52,8 +47,8 @@ html(lang="en")
     .container-fluid.justify-content-center
       a(href="#" class= "navbar-brand")
        img(id="logo" src="https://res.cloudinary.com/dvwsiufhl/image/upload/q_auto:best,c_thumb,w_113,e_shadow:30,co_black/v1602247579/PrinceofTarts/logo-black_g0gkfc.png")
-      button(class="navbar-toggler border" type="button" data-toggle="collapse" data-target="#navbarItems" aria-controls="navbarItems" aria-expanded="false" aria-label="Toggle navigation" style="border:none")
-       span(class="navbar-toggler-icon")
+      button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarItems" aria-controls="navbarItems" aria-expanded="false" aria-label="Toggle navigation" style="border:none")
+       span(class="navbar-toggler-icon border border-dark")
       .collapse.navbar-collapse(id="navbarItems")
        .navbar-nav
         a(class="nav-link active btn btn-c font-weight-bold mt-1 p-1 rounded" style="background: #FF6B03" href="https://res.cloudinary.com/dvwsiufhl/image/upload/q_100,f_auto/v1602506444/PrinceofTarts/Prince_of_Tarts_Menu_ltunc2.jpg" target="_blank" role="button" aria-current="page") Menu
