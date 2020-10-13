@@ -12,8 +12,7 @@ html(lang="en")
 
   style.
     body {
-        background-color:#414142;
-        
+        background-color:#414142;  
     }
 
    li {
@@ -21,10 +20,13 @@ html(lang="en")
     border-radius: 10% !important;
     }
 
-    @media screen and (max-width: 991px) {
+   #logo {
+     height: 15vmin;
+   }
+
+    @media screen and (max-height: 731px) {
       #logo {
-        height: 100px;
-        width: 100px;
+        height: 25vmin;
       }
       a {
         padding: 0.5em;
@@ -46,7 +48,7 @@ html(lang="en")
    nav(class= "navbar fixed-top")
     .container-fluid.justify-content-center
       a(href="#" class= "navbar-brand mr-0 pr-0")
-       img(id="logo" src="https://res.cloudinary.com/dvwsiufhl/image/upload/q_auto:best,c_thumb,w_113,e_shadow:30,co_black/v1602247579/PrinceofTarts/logo-black_g0gkfc.png" alt="Company Logo")
+       img(id="logo" src="https://res.cloudinary.com/dvwsiufhl/image/upload/q_auto,f_auto,e_shadow:30,co_black/v1602247579/PrinceofTarts/logo-black_g0gkfc.png" alt="Company Logo")
       button(class="navbar-toggler ml-0" type="button" data-toggle="collapse" data-target="#navbarItems" aria-controls="navbarItems" aria-expanded="false" aria-label="Toggle navigation" style="border:none")
        span(class="navbar-toggler-icon border border-dark")
       .collapse.navbar-collapse(id="navbarItems")
