@@ -20,8 +20,39 @@ html(lang="en")
     border-radius: 10% !important;
     }
 
+   .tap-me {
+     color: white;
+     background
+     position: relative;
+     bottom: 5vw;
+     left: 5vw;
+     animation: go-away 5s forwards;
+   }
+
+   @keyframes go-away {
+     100% {
+      opacity: 0;
+      display: absolute;
+     }
+   }
+
    #logo {
      height: 15vmin;
+     animation: wiggle 250ms forwards;
+     animation-iteration-count: 4;
+     position: relative;
+   }
+
+   @keyframes wiggle {
+     0% {
+       left: 0.5vw;
+     }
+     50% {
+       left: -0.5vw;
+     }
+     100% {
+       left: 0;
+     }
    }
 
     @media screen and (max-height: 731px) {
@@ -48,11 +79,12 @@ html(lang="en")
    nav(class= "navbar fixed-top")
     .container-fluid.justify-content-center
       a(href="#" class= "navbar-brand mr-0 pr-0")
-       img(id="logo" src="https://res.cloudinary.com/dvwsiufhl/image/upload/q_auto,f_auto,e_shadow:30,co_black/v1602247579/PrinceofTarts/logo-black_g0gkfc.png" alt="Company Logo")
-      button(class="navbar-toggler ml-0" type="button" data-toggle="collapse" data-target="#navbarItems" aria-controls="navbarItems" aria-expanded="false" aria-label="Toggle navigation" style="border:none")
-       span(class="navbar-toggler-icon border border-dark")
+       img(id="logo" src="https://res.cloudinary.com/dvwsiufhl/image/upload/q_auto,f_auto,e_shadow:30,co_black/v1602247579/PrinceofTarts/logo-black_g0gkfc.png" alt="Company Logo" data-toggle="collapse" data-target="#navbarItems" aria-controls="navbarItems" aria-expanded="false" aria-label="Toggle navigation" style="border:none")
+       span(class="tap-me") Tap logo to start
       .collapse.navbar-collapse(id="navbarItems")
        .navbar-nav
         a(class="nav-link active btn btn-c font-weight-bold mt-1 p-1 rounded" style="background: #FF6B03" href="https://res.cloudinary.com/dvwsiufhl/image/upload/q_100,f_auto/v1602506444/PrinceofTarts/Prince_of_Tarts_Menu_ltunc2.jpg" target="_blank" role="button" aria-current="page") Menu
         a(class="nav-link btn btn-c font-weight-bold mt-1 rounded pl-1 pr-1" style="background: #FF6B03") Cake Menu
         a(class="nav-link btn btn-c font-weight-bold mt-1 rounded" style="background: #FF6B03" data-toggle="modal" data-target="#modal") Contact Us
+
+        //- button(class="navbar-toggler ml-0" type="button" data-toggle="collapse" data-target="#navbarItems" aria-controls="navbarItems" aria-expanded="false" aria-label="Toggle navigation" style="border:none")
